@@ -1,3 +1,5 @@
+package br.bernabeu;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -15,24 +17,24 @@ public class WalkDir {
         Files.walkFileTree(Paths.get("/"),
                 new SimpleFileVisitor<Path>() {
                     @Override
-                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-//                        System.out.printf("Visiting file %s\n", file);
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+                        System.out.printf("Visiting file %s\n", file);
                         dirVisitado++;
 
                         return FileVisitResult.CONTINUE;
                     }
 
                     @Override
-                    public FileVisitResult visitFileFailed(Path file, IOException e) throws IOException {
-//                        System.err.printf("Visiting failed for %s\n", file);
+                    public FileVisitResult visitFileFailed(Path file, IOException e) {
+                        System.err.printf("Visiting failed for %s\n", file);
                         dirErro++;
 
                         return FileVisitResult.SKIP_SUBTREE;
                     }
 
                     @Override
-                    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
-//                        System.out.printf("About to visit directory %s\n", dir);
+                    public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
+                        System.out.printf("About to visit directory %s\n", dir);
 
                         return FileVisitResult.CONTINUE;
                     }
@@ -42,5 +44,7 @@ public class WalkDir {
         System.out.println("Diretórios visitados: " + dirVisitado);
         System.out.println("Diretórios com erro: " + dirErro);
     }
+
+
 
 }
