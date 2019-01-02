@@ -1,4 +1,4 @@
-package br.bernabeu;
+package spells;
 
 /**
  * @author Rafael Bernabeu

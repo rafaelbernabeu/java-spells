@@ -1,4 +1,4 @@
-package br.bernabeu;
+package spells;
 
 import java.io.IOException;
 import java.nio.file.*;

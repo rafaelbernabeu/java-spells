@@ -1,4 +1,4 @@
-package br.bernabeu;
+package spells;
 
 public class Pessoa {
 
