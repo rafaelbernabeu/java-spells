@@ -11,7 +11,7 @@ import java.util.List;
 public class URLUtil {
 
     public static ObjectMapper getObjectMapper() {
-        return SingletonUtil.createInstance(ObjectMapper.class);
+        return SingletonUtil.getInstance(ObjectMapper.class);
     }
 
     private static <T> List<T> parseListofData(String jsonData, Class<T> responseType) throws IOException {

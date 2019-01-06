@@ -8,24 +8,32 @@ public class SingletonUtil {
 
     private static final Map<Class, Object> singletonInstances = new HashMap<>();
 
-    public static <T> T createInstance(Class<T> requestedInstance) {
-        return createInstance(requestedInstance, null);
+    public static <T> T getInstance(Class<T> requestedInstance) {
+        return getInstance(requestedInstance, null);
     }
 
-    public static <T, E> T createInstance(Class<T> requestedInstance, Class<E>[] parameterTypes, Object... objArgs) {
-        try {
-            return (T) putInstance(requestedInstance.getDeclaredConstructor(parameterTypes).newInstance(objArgs));
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            e.printStackTrace();
-            return null;
+    public static <T> T getInstance(Class<T> requestedInstance, Class[] parameterTypes, Object... objArgs) {
+        return getInstance(requestedInstance, false, parameterTypes, objArgs);
+    }
+
+    public static <T> T getInstance(Class<T> requestedInstance, boolean override, Class[] parameterTypes, Object... objArgs) {
+        T instance = getFromMap(requestedInstance);
+        if (instance == null) {
+            synchronized (SingletonUtil.class) {
+                if (getFromMap(requestedInstance) == null) {
+                    try {
+                        return (T) putInMap(requestedInstance.getDeclaredConstructor(parameterTypes).newInstance(objArgs), override);
+                    } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                        e.printStackTrace();
+                        return null;
+                    }
+                }
+            }
         }
+        return instance;
     }
 
-    public static <T> T putInstance(T instance) {
-        return SingletonUtil.putInstance(instance, Boolean.FALSE);
-    }
-
-    public static <T> T putInstance(T instance, Boolean override) {
+    private static <T> T putInMap(T instance, Boolean override) {
         if (override || !singletonInstances.containsKey(instance.getClass())) {
             synchronized (SingletonUtil.class) {
                 if (override || !singletonInstances.containsKey(instance.getClass())) {
@@ -33,10 +41,10 @@ public class SingletonUtil {
                 }
             }
         }
-        return instance;
+        return (T) singletonInstances.get(instance.getClass());
     }
 
-    public static <T> T getInstance(Class<T> requestedInstance) {
+    private static <T> T getFromMap(Class<T> requestedInstance) {
         return (T) singletonInstances.get(requestedInstance);
     }
 

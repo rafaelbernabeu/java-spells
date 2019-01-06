@@ -22,7 +22,7 @@ public class ForkJoinTaskUtil<T> extends RecursiveTask<Collection<T>> {
     }
 
     private ForkJoinTaskUtil(Collection<T> tasks, int start, int end, Consumer<T> command, int splitValue) {
-        pool = SingletonUtil.createInstance(ForkJoinPool.class);
+        pool = SingletonUtil.getInstance(ForkJoinPool.class);
         this.tasks = new ArrayList<>(tasks);
         this.start = start;
         this.end = end;
