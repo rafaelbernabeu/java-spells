@@ -1,11 +1,11 @@
 package spells;
 
-public class Pessoa {
+public class PessoaBuilderTest {
 
     private String nome;
     private Integer idade;
 
-    private Pessoa(){}
+    private PessoaBuilderTest(){}
 
     public String getNome() {
         return nome;
@@ -24,13 +24,13 @@ public class Pessoa {
     }
 
     public static PessoaBuilder builder() {
-        return new Pessoa.PessoaBuilder(new Pessoa());
+        return new PessoaBuilderTest.PessoaBuilder(new PessoaBuilderTest());
     }
     
     public static class PessoaBuilder {
-        private Pessoa p;
+        private PessoaBuilderTest p;
 
-        private PessoaBuilder(Pessoa p) {
+        private PessoaBuilder(PessoaBuilderTest p) {
             this.p = p;
         }
         public PessoaBuilder nome(String n) {
@@ -39,7 +39,7 @@ public class Pessoa {
         public PessoaBuilder idade(Integer i) {
             p.idade = i; return new PessoaBuilder(p);
         }
-        public Pessoa build() { return p; }
+        public PessoaBuilderTest build() { return p; }
 
     }
 
