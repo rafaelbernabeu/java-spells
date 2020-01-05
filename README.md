@@ -4,6 +4,16 @@ Some Java knowledge...
 
 [JDK changelog](https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html)
 
+[JDK 7](https://www.oracle.com/technetwork/java/javase/jdk7-relnotes-418459.html):
+- Multi-catch
+- The try-with-resources Statement
+- Strings in switch Statements
+- Underscores in Numeric Literals
+- Binary Literals
+- Java XML - JAXP, JAXB, and JAX-WS
+- Diamonds
+- ...
+
 [JDK 8](https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html):
 - Removal of PermGen
 - Default Methods
@@ -37,10 +47,18 @@ Some Java knowledge...
 - Unicode 10
 - TLS 1.3 
 - Local-Variable Syntax for Lambda Parameters (var)
+- Launch Single-File Source-Code Programs (java HelloWorld.java)
+- Standardize the incubated HTTP Client API introduced in JDK 9, via JEP 110, and updated in JDK 10 (JEP 321)
+- Low-Overhead Heap Profiling (JVMTI)
 - ...
 
 [JDK 12](https://www.oracle.com/technetwork/java/javase/12-relnote-issues-5211422.html#NewFeature):
-
+- Unicode 11 
+- Compact Number Formatting
+- New Java Flight Recorder (JFR) Security Events
+- ...
 
 [JDK 13](https://www.oracle.com/technetwork/java/javase/13-relnote-issues-5460548.html#NewFeature):
+- Unicode 12.1
+- ...
 
