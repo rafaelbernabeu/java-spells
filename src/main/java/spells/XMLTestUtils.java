@@ -1,4 +1,4 @@
-package br.bernabeu;
+package spells;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -47,7 +47,9 @@ public class XMLTestUtils {
     private List<Node> getAllNodes(NodeList nodeList) {
         List<Node> allNodesList = new ArrayList<>();
         int childNodesLength = nodeList.getLength();
-        if (childNodesLength == 0) { return allNodesList; }
+        if (childNodesLength == 0) {
+            return allNodesList;
+        }
         for (int i = 0; i < childNodesLength; i++) {
             Node item = nodeList.item(i);
             allNodesList.add(item);

@@ -1,4 +1,5 @@
-import javax.inject.Singleton;
+package spells;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.time.Duration;

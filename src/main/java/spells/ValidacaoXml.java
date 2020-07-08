@@ -1,3 +1,5 @@
+package spells;
+
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
