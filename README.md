@@ -62,3 +62,53 @@ Some Java knowledge...
 - Unicode 12.1
 - ...
 
+[JDK 14](https://www.oracle.com/java/technologies/javase/14-relnote-issues.html#NewFeature)
+- Accounting Currency Format Support
+- Event Streaming
+- Switch Expressions
+
+[JDK 15](https://www.oracle.com/java/technologies/javase/15-relnote-issues.html#NewFeature)
+- Added isEmpty Default Method to CharSequence
+- Unicode 13.0
+- Hidden Classes
+- Text Blocks
+- Specialized Implementations of TreeMap Methods
+
+[JDK 16](https://www.oracle.com/java/technologies/javase/16-relnote-issues.html#NewFeature)
+- Pattern Matching for the instanceof Operator
+- Strongly Encapsulate JDK Internals by Default
+- Unix domain sockets
+- Day Period Support Added to java.time Formats
+- Add Stream.toList() Method
+- ZGC Concurrent Stack Processing
+- Concurrently Uncommit Memory in G1
+- Records
+- Packaging Tool
+
+[JDK 17](https://www.oracle.com/java/technologies/javase/17-relnote-issues.html#NewFeature)
+- Sealed Classes
+- New macOS Rendering Pipeline (Apple Metal accelerated rendering API)
+- DatagramSocket Can Be Used Directly to Join Multicast Groups
+- New API for Accessing Large Icons
+- Enhanced Pseudo-Random Number Generators
+- Source Details in Error Messages
+- Modernization of Ideal Graph Visualizer
+- Add java.time.InstantSource
+- Hex Formatting and Parsing Utility
+- Experimental Compiler Blackholes Support
+- macOS/AArch64 Port
+- Unified Logging Supports Asynchronous Log Flushing
+
+[JDK 18](https://www.oracle.com/java/technologies/javase/18-relnote-issues.html#NewFeature)
+- UTF-8 by Default
+- Simple Web Server (jwebserver)
+- Internet-Address Resolution SPI
+- Code Snippets in Java API Documentation
+- ZGC Supports String Deduplication
+- ParallelGC Supports String Deduplication
+
+[JDK 19](https://www.oracle.com/java/technologies/javase/19-relnote-issues.html#NewFeature)
+- Support Unicode 14.0
+- Additional Date-Time Formats
+- New Methods to Create Preallocated HashMaps and HashSets
+- New XML Processing Limits
