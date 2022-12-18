@@ -4,5 +4,7 @@ module spells.module {
      requires java.xml;
      requires org.jsoup;
      requires org.apache.poi.ooxml;
+     requires lombok;
      exports spells;
+    exports spells.jdk14;
 }

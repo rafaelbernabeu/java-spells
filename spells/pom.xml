@@ -15,6 +15,10 @@
         <configuration>
           <source>19</source>
           <target>19</target>
+          <compilerArgs>
+            <arg>--enable-preview </arg>
+            <arg>--add-modules=jdk.incubator.concurrent</arg>
+          </compilerArgs>
         </configuration>
       </plugin>
     </plugins>
