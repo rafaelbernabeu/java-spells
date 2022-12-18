@@ -19,7 +19,7 @@ public class Fibonacci {
 
     private static void fibonacci1() {
         System.out.println(valorAtual);
-        while (valorAtual < 1000000000) {
+        while (valorAtual < 1_000) {
             int proximoValor;
             System.out.println(proximoValor = ultimoValor + valorAtual);
             ultimoValor = valorAtual;

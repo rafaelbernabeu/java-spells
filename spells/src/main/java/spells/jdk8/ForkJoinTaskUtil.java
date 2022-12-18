@@ -1,4 +1,4 @@
-package spells;
+package spells.jdk8;
 
 import java.util.ArrayList;
 import java.util.Collection;

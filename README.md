@@ -35,7 +35,7 @@ Some Java knowledge...
 - Unicode 8.0
 - ...
 
-[JDK 10](https://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html#NewFeature):
+[JDK 10](https://www.oracle.com/java/technologies/javase/10all-relnotes.html):
 - APIs for Creating Unmodifiable Collections
 - Local-Variable Type Inference (var)
 - Provides a default set of root Certification Authority (CA) certificates in the JDK.
@@ -43,7 +43,7 @@ Some Java knowledge...
 - Improves G1 worst-case latencies by making the full GC parallel.
 - ...
 
-[JDK 11](https://www.oracle.com/technetwork/java/javase/11-relnote-issues-5012449.html#NewFeature):
+[JDK 11](https://www.oracle.com/java/technologies/javase/11all-relnotes.html):
 - Unicode 10
 - TLS 1.3 
 - Local-Variable Syntax for Lambda Parameters (var)

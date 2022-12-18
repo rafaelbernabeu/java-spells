@@ -1,6 +1,6 @@
 package spells;
 
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 /**
  * @author Rafael Bernabeu
@@ -8,9 +8,8 @@ import java.util.stream.Stream;
 public class FindPrimeNumbers {
 
     public static void main(String... args) {
-        Stream.iterate(0, n -> n + 1)
+        IntStream.range(0, 1_000_000)
                 .filter(FindPrimeNumbers::ehPrimo)
-                .limit(1000)
                 .forEach(System.out::println);
 
     }
