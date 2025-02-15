@@ -1,4 +1,4 @@
-package demo.jdk21;
+package demo.jdk22;
 
 import java.io.Serializable;
 import java.util.Arrays;
