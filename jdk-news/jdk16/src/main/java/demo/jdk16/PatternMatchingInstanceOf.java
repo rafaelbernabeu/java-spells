@@ -2,6 +2,7 @@ package demo.jdk16;
 
 public class PatternMatchingInstanceOf {
 
+
     public static void main(String[] args) {
         Object obj = "Rafael";
 
@@ -12,4 +13,17 @@ public class PatternMatchingInstanceOf {
         }
     }
 
+    public static boolean teste(Object obj) {
+        if (!(obj instanceof String str)) {
+            throw new RuntimeException();
+        }
+
+        System.out.println(str.trim());
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

@@ -13,5 +13,4 @@ public class PatternMatchingSwitch {
             default -> throw new IllegalArgumentException();
         }
     }
-
 }
