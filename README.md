@@ -3,6 +3,7 @@
 Some Java knowledge...
 
 [JDK changelog](https://www.oracle.com/technetwork/java/javase/jdk-relnotes-index-2162236.html)
+[JDK significant changes](https://docs.oracle.com/en/java/javase/23/migrate/significant-changes-jdk-release.html#GUID-561005C1-12BB-455C-AD41-00455CAD23A6)
 
 [JDK 7](https://www.oracle.com/technetwork/java/javase/jdk7-relnotes-418459.html):
 - Multi-catch

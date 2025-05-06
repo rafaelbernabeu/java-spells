@@ -1,4 +1,4 @@
-package spells;
+package patterns.creational.builder;
 
 public class PessoaBuilderTest {
 
