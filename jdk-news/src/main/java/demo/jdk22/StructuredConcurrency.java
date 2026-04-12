@@ -13,17 +13,16 @@ public class StructuredConcurrency {
         System.out.println(task());
     }
 
-    private static List<? extends Serializable> task() throws ExecutionException, InterruptedException {
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+    private static List<? extends Serializable> task() throws InterruptedException {
+        try (var scope = StructuredTaskScope.open(StructuredTaskScope.Joiner.allSuccessfulOrThrow())) {
             Subtask<String> user  = scope.fork(StructuredConcurrency::findUser);
             Subtask<Integer> order = scope.fork(StructuredConcurrency::fetchOrder);
 
             scope.join();           // Join both forks
-            scope.throwIfFailed();  // ... and propagate errors
 
             // Here, both forks have succeeded, so compose their results
             return Arrays.asList(user.get(), order.get());
-        } catch (ExecutionException | InterruptedException e) {
+        } catch (InterruptedException e) {
             throw e;
         }
     }

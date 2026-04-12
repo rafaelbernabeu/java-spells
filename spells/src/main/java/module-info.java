@@ -6,6 +6,7 @@ module spells.module {
     requires org.apache.poi.ooxml;
     requires com.fasterxml.jackson.databind;
     requires lombok;
+    requires java.logging;
 
     exports spells;
 
